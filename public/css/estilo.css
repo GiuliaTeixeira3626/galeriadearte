@@ -134,11 +134,13 @@ body {
 
 .footer {
   background-color: #f1d18a;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   height: 150px;
   color: #fff;
   display: flex;
   font-size: 15px;
 }
+
 
 .footer .container {
   justify-content: center;
