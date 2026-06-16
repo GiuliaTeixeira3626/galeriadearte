@@ -17,168 +17,239 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
- <style>
-    .campo textarea {
-      padding: 10px 14px;
-      border: 1.5px solid #e0e0e0;
-      border-radius: 8px;
-      font-family: "Poppins", sans-serif;
-      font-size: 13px;
-      color: #353734;
-      background-color: #fafafa;
-      outline: none;
-      transition: 0.2s;
-      resize: vertical;
-      min-height: 100px;
-      width: 100%;
-    }
+    <style>
+        .main-content {
+            width: 90%;
+            max-width: 900px;
+            margin: 40px auto;
+            font-family: "Poppins", sans-serif;
+        }
 
-    .campo textarea:focus {
-      border-color: #6bad60;
-      background-color: white;
-    }
+        .page-title {
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-align: center;
+        }
 
-    .btn-enviar {
-      background-color: #28631d;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 12px 28px;
-      font-family: "Poppins", sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-      margin-top: 8px;
-    }
+        .card-empresa {
+            background-color: #1a321b;
+            border: 1px solid #291f15;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            font-family: "Playfair Display", serif;
+        }
 
-    .btn-enviar:hover {
-      background-color: #1f4f15;
-    }
+        .card-titulo {
+            color: #e3b062;
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
 
-    .btn-enviar:active {
-      transform: scale(0.98);
-    }
+        .empresa-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
-    .btn-enviar:disabled {
-      background-color: #aaa;
-      cursor: not-allowed;
-      transform: none;
-    }
+        .campo {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .feedback-msg {
-      display: none;
-      align-items: center;
-      gap: 10px;
-      border-radius: 10px;
-      padding: 13px 18px;
-      margin-top: 16px;
-      font-size: 13px;
-      font-weight: 600;
-    }
+        .campo label {
+            color: white;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
 
-    .feedback-msg.sucesso {
-      background-color: rgba(107, 173, 96, 0.15);
-      border: 1.5px solid rgba(107, 173, 96, 0.4);
-      color: #28631d;
-    }
+        .campo input,
+        .campo textarea {
+            background-color: #e6e7b3;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 12px;
+            color: #e6e7b3;
+            font-family: "Poppins", sans-serif;
+        }
 
-    .feedback-msg.erro {
-      background-color: rgba(185, 31, 31, 0.1);
-      border: 1.5px solid rgba(185, 31, 31, 0.3);
-      color: #b91f1f;
-    }
+        .campo input:focus,
+        .campo textarea:focus {
+            border-color: #000000;
+        }
 
-    .campo-erro {
-      border-color: #df6a6a !important;
-      background-color: #fff8f8 !important;
-    }
+        .btn-enviar {
+            width: 200px;
+            align-self: center;
+            background-color: #362a1c;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
 
-    .label-erro {
-      font-size: 11px;
-      color: #b91f1f;
-      margin-top: 3px;
-    }
-  </style>
+        .btn-enviar:hover {
+            background-color: #362a1c;
+        }
+
+        .campo textarea {
+            padding: 10px 14px;
+            border: 1.5px solid #e6e7b3;
+            border-radius: 8px;
+            font-family: "Poppins", sans-serif;
+            font-size: 13px;
+            color: #000000;
+            background-color: #e6e7b3;
+            outline: none;
+            transition: 0.2s;
+            resize: vertical;
+            min-height: 100px;
+            width: 100%;
+        }
+
+        .campo textarea:focus {
+            border-color: #6bad60;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .btn-enviar {
+            background-color: #362a1c;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 28px;
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            margin-top: 8px;
+        }
+
+        .btn-enviar:hover {
+            background-color: #1d170f;
+        }
+
+        .btn-enviar:active {
+            transform: scale(0.98);
+        }
+
+        .btn-enviar:disabled {
+            background-color: #aaa;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .feedback-msg {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            border-radius: 10px;
+            padding: 13px 18px;
+            margin-top: 16px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .feedback-msg.sucesso {
+            background-color: rgba(107, 173, 96, 0.15);
+            border: 1.5px solid rgba(107, 173, 96, 0.4);
+            color: #28631d;
+        }
+
+        .feedback-msg.erro {
+            background-color: rgba(185, 31, 31, 0.1);
+            border: 1.5px solid rgba(185, 31, 31, 0.3);
+            color: #b91f1f;
+        }
+
+        .campo-erro {
+            border-color: #df6a6a !important;
+            background-color: #fff8f8 !important;
+        }
+
+        .label-erro {
+            font-size: 11px;
+            color: #b91f1f;
+            margin-top: 3px;
+        }
+    </style>
 </head>
 
-<body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;"
-    <div class="janela">
+<body onload="validarSessao(), atualizarFeed()" style="background-color: #0b200c; font-family: Playfair Display, serif;" <div class="janela">
 
 
-        <div class="header-left">
+    <div class="header-left">
 
-            <h1>LumenArt</h1>
+        <h1>LumenArt</h1>
 
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="cards.html">
-                    <h3>Monitoramento das Salas</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-                <a href="./mural.html">
-                    <h3>Avalie sua experiência</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
+        <div class="hello">
+            <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
         </div>
 
-        <div class="dash-right">
+        <div class="btn-nav-white">
+            <a href="cards.html">
+                <h3>Monitoramento das Salas</h3>
+            </a>
+        </div>
 
 
-            <div class="main-content">
-                <div class="page-title">Fale Conosco</div>
+        <div class="btn-nav">
+            <a href="./mural.html">
+                <h3>Avalie sua experiência</h3>
+            </a>
+        </div>
 
-                <div class="card-empresa">
-                    <div class="card-titulo">
-                        Envie sua mensagem
+        <div class="btn-logout" onclick="limparSessao()">
+            <h3>Sair</h3>
+        </div>
+
+    </div>
+
+    <div class="dash-right">
+
+
+        <div class="main-content">
+
+            <div class="card-empresa">
+                <div class="card-titulo">
+                    Envie sua mensagem
+                </div>
+                <div class="empresa-grid">
+
+                    <div class="campo">
+                        <label for="nome">Seu nome</label>
+                        <input type="text" id="nome" placeholder="Ex: Seu nome" />
+                        <span class="label-erro" id="erro-nome"></span>
                     </div>
-                    <div class="empresa-grid">
 
-                        <div class="campo">
-                            <label for="nome">Seu nome</label>
-                            <input type="text" id="nome" placeholder="Ex: Seu nome" />
-                            <span class="label-erro" id="erro-nome"></span>
-                        </div>
-
-                        <div class="campo">
-                            <label for="email">E-mail para contato</label>
-                            <input type="email" id="email" placeholder="seuemail@exemplo.com" />
-                            <span class="label-erro" id="erro-email"></span>
-                        </div>
-
-                        <div class="campo" style="grid-column: span 2;">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem"
-                                placeholder="Descreva sua dúvida ou problema em detalhes..."></textarea>
-                            <span class="label-erro" id="erro-mensagem"></span>
-                        </div>
-
-                        <div style="grid-column: span 2;">
-                            <button class="btn-enviar" id="btn-enviar" onclick="enviar()">Enviar Mensagem</button>
-                        </div>
-
-                        <div class="feedback-msg" id="feedback" style="grid-column: span 2;"></div>
-
+                    <div class="campo">
+                        <label for="email">E-mail para contato</label>
+                        <input type="email" id="email" placeholder="seuemail@exemplo.com" />
+                        <span class="label-erro" id="erro-email"></span>
                     </div>
+
+                    <div class="campo" style="grid-column: span 2;">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" placeholder="Descreva sua dúvida ou problema em detalhes..."></textarea>
+                        <span class="label-erro" id="erro-mensagem"></span>
+                    </div>
+
+                    <div style="grid-column: span 2;">
+                        <button class="btn-enviar" id="btn-enviar" onclick="enviar()">Enviar Mensagem</button>
+                    </div>
+
+                    <div class="feedback-msg" id="feedback" style="grid-column: span 2;"></div>
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <script>
 

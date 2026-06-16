@@ -120,7 +120,7 @@ body {
   position: relative;
   top: 0;
   left: 20%;
-  background-color: #ececf5;
+  background-color: #0b200c;
   height: 100vh;
   overflow: auto;
 }
@@ -131,8 +131,8 @@ body {
   flex-direction: column;
   width: 70%;
   margin: auto;
-  margin-top: 10px;
-  background-color: #212124;
+  margin-top: 250px;
+  background-color: #362a1c;
 }
 
 .area-parametros-alerta .titulo-legenda {
@@ -167,23 +167,37 @@ body {
 }
 
 .perigo-frio {
-  background-color: #5c6bc0;
+  background-color: #e6e7b3;
+  border: 3px solid #362a1c;
+  border-radius: 5px;
 }
 
 .perigo-quente {
-  background-color: #ff7043;
+  background-color: #e6e7b3;
+  
+  border: 3px solid #362a1c;
+  border-radius: 5px;
 }
 
 .alerta-frio {
-  background-color: #42a5f5;
+  background-color: #e6e7b3;
+  
+  border: 3px solid #362a1c;
+  border-radius: 5px;
 }
 
 .alerta-quente {
-  background-color: #ffee58;
+  background-color: #e6e7b3;
+  
+  border: 3px solid #362a1c;
+  border-radius: 5px;
 }
 
 .ideal {
-  background-color: #9ccc65;
+  background-color: #e6e7b3;
+  
+  border: 3px solid #362a1c;
+  border-radius: 5px;
 }
 
 .cards {
@@ -347,15 +361,15 @@ canvas {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  border-right: 3px solid #e6e7b3;
+  background-color: #0b200c;
 }
 
 .dash-right {
   display: flex;
   width: 70%;
   height: fit-content;
-  background-color: #161618;
+  background-color: #0b200c;
   position: relative;
   top: 0;
   left: 25%;
@@ -364,7 +378,7 @@ canvas {
 }
 
 .header-left h1 {
-  color: #32b9cd;
+  color: #e6e7b3;
 }
 
 .hello {
@@ -385,8 +399,8 @@ canvas {
 
 .btn-nav {
   width: 40%;
-  color: white;
-  background-color: #e6005a;
+  color: #ddddc9;
+  background-color: #362a1c;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
@@ -394,15 +408,15 @@ canvas {
 
 .btn-nav-white {
   width: 40%;
-  background-color: white;
-  border: 3px solid #e6005a;
+  background-color: #ddddc9;
+  border: 3px solid #362a1c;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
 }
 
 .btn-nav-white h3 {
-  color: #e6005a;
+  color: #362a1c;
   padding: 0;
   margin: 0;
 }
@@ -417,8 +431,8 @@ canvas {
   margin: 0;
   padding: 0;
   width: 20%;
-  background-color: #32b9cd;
-  color: white;
+  background-color: rgb(227, 176, 98);
+  color: rgb(0, 0, 0);
   border-radius: 10px;
   text-align: center;
   padding: 10px 15px;

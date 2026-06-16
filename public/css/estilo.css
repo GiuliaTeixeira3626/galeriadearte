@@ -24,7 +24,7 @@ body {
 
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #e6e7b3;
+  border-bottom: 2px solid #b3e7b7;
   width: 100%;
   background-color: rgba(68, 65, 65, 0.5);
   backdrop-filter: blur(2px);
