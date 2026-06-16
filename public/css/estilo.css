@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Barlow:wght@400;500;600;700&display=swap');
 
 body {
   margin: 0;
@@ -10,7 +9,7 @@ body {
 
 :root {
   --tamanho-header: 80px;
-  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-banner: 100vh;
   --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
   --tamanho-footer: 65px;
@@ -134,12 +133,14 @@ body {
 /* FOOTER */
 
 .footer {
-  background-color: #fd84ff;
+  background-color: #f1d18a;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   height: 150px;
   color: #fff;
   display: flex;
   font-size: 15px;
 }
+
 
 .footer .container {
   justify-content: center;
@@ -311,7 +312,125 @@ body {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
+<<<<<<< HEAD
 .card_erro #mensagem_erro {
   color: #333;
   font-size: 15px;
+=======
+.mensagem-alarme h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.mensagem-alarme .informacao {
+  width: 66%;
+}
+
+.alarme-sino {
+  width: 48px;
+  height: 48px;
+  animation-name: bell;
+  animation-duration: 4s;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/1157/1157000.png');
+  background-size: cover;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bell {
+  0%   {transform: rotate(25deg)}
+  25%  {transform: rotate(-25deg)}
+  50%  {transform: rotate(25deg)}
+  75%  {transform: rotate(-25deg)}
+  100% {transform: rotate(25deg)}
+}
+
+/* SOBRE */
+
+.sobre {
+  padding: clamp(70px, 12vw, 130px) 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(241, 209, 138, 0.10), transparent 60%),
+              linear-gradient(160deg, #1f3d0c 0%, #122907 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: 60%;
+  height: 70%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.sobre .container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+
+.sobre-eyebrow {
+  display: inline-block;
+  font-family: "Barlow", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #e3b062;
+  margin-bottom: 16px;
+}
+
+.sobre h2 {
+  color: #f1d18a;
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 1px;
+  text-shadow: 0 0 30px rgba(241, 209, 138, 0.25);
+}
+
+.sobre-divisor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 22px 0 32px;
+}
+
+.sobre-divisor::before,
+.sobre-divisor::after {
+  content: '';
+  height: 1px;
+  width: 56px;
+  background: rgba(241, 209, 138, 0.45);
+}
+
+.sobre-divisor span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f1d18a;
+  display: inline-block;
+}
+
+.sobre p {
+  color: rgba(255, 255, 255, 0.88);
+  width: 100%;
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.85;
+  margin: 0 0 22px;
+}
+
+.sobre p:last-of-type {
+  margin-bottom: 0;
+}
+
+.sobre p span {
+  color: #f1d18a;
+  font-weight: bold;
+>>>>>>> cbc5e0fe35a94d5688cca1ff57e45e58b7f38542
 }
