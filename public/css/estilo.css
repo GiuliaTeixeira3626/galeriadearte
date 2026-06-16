@@ -23,7 +23,7 @@ body {
 
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #32b9cd;
+  border-bottom: 2px solid #e483ff;
 }
 
 .header .container {
@@ -51,7 +51,7 @@ body {
 }
 
 .titulo {
-  color: #32b9cd;
+  color: #f874ff;
   width: fit-content;
   font-weight: 500;
 }
@@ -64,8 +64,8 @@ body {
 
 .banner {
   height: var(--tamanho-banner);
-  color: white;
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  color: rgb(253, 134, 255);
+  background-image: url('../assets/imgs/Picaquadro.jpg');
   background-size: cover;
 }
 
@@ -89,7 +89,7 @@ body {
 /* MISSÃO VISÃO VALORES */
 
 .social {
-  background-color: #e5e5e5;
+  background-color: #d2d2d2;
   display: flex;
 }
 
@@ -121,7 +121,7 @@ body {
 /* FOOTER */
 
 .footer {
-  background-color: #32b9cd;
+  background-color: #fd84ff;
   height: 150px;
   color: #fff;
   display: flex;
