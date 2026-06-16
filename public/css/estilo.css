@@ -312,11 +312,12 @@ body {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-<<<<<<< HEAD
+
 .card_erro #mensagem_erro {
   color: #333;
   font-size: 15px;
-=======
+}
+
 .mensagem-alarme h3 {
   font-size: 14px;
   margin: 0;
@@ -432,5 +433,4 @@ body {
 .sobre p span {
   color: #f1d18a;
   font-weight: bold;
->>>>>>> cbc5e0fe35a94d5688cca1ff57e45e58b7f38542
 }
