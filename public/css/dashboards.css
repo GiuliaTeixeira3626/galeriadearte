@@ -112,7 +112,7 @@ body {
 /* pagina graficos */
 
 .dash-header {
-  background-color: #212124;
+  background-color: #dcdcf3;
 }
 
 .dash {
@@ -120,7 +120,7 @@ body {
   position: relative;
   top: 0;
   left: 20%;
-  background-color: #161618;
+  background-color: #ececf5;
   height: 100vh;
   overflow: auto;
 }
